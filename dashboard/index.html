@@ -1,0 +1,37 @@
+<?php
+include 'login.php';
+if (AUTH == "YES") {
+    die();
+} else {
+    header('Location: index.html');
+    exit(); // Add an exit call after header redirect to stop script execution
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload .deb File</title>
+</head>
+<body>
+<h2>Repo Manager</h2>
+<div>
+
+</div>
+ <a href="/files.php">Files</a>
+ <div>
+ 
+ </div>
+  <a href="/dashboard/update.php">Manually run update script</a>
+  <div>
+  
+  </div>
+  <h4>Add Package</h4>
+<form action="/dashboard/upload.php" method="post" enctype="multipart/form-data">
+  <input type="file" name="upload" id="upload" accept=".deb">
+  <input type="submit" value="Upload">
+</form>
+    
+</html>

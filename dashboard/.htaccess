@@ -1,0 +1,12 @@
+AuthType Basic
+AuthUserFile "/usr/home/joshuawhe/.htpasswd"
+require valid-user
+AuthName "U Admin?"
+
+<Files files.php>
+AuthType Basic
+AuthUserFile "/usr/home/joshuawhe/.htpasswd"
+require valid-user
+AuthName "U Admin?"
+</Files>
+
